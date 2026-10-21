@@ -5,6 +5,8 @@
 - **`/handoff`**: Am Ende einer Session schreibt der Agent eine kurze Übergabe nach `.agent/handoff.md` mit Ziel, Stand, nächsten Schritten und dem, was **nicht** noch einmal probiert werden soll.
 - **`/pickup`**: In der nächsten Session (auch in einem anderen Tool) liest der Agent die Übergabe und schlägt den nächsten Schritt vor.
 
+**In English:** KontextKit Lite adds two commands to Claude Code, OpenAI Codex, Cursor and GitHub Copilot. `/handoff` writes a short session handoff to `.agent/handoff.md`: goal, current state, next steps and what not to try again. `/pickup` reads it in the next session, even in a different tool, and suggests the next step (in Codex: `$handoff` and `$pickup`). Free, MIT licensed, no dependencies, runs locally. The rest of this README is in German.
+
 Kostenlos, MIT-Lizenz, ohne Abhängigkeiten, läuft komplett lokal.
 
 > Du willst mehr? **KontextKit Core** synchronisiert eine Quelldatei in CLAUDE.md, AGENTS.md, Cursor-Rules und Copilot-Instructions. Dazu kommen strukturierte Übergaben, eine Session-Start-Checkliste und ein Leitfaden „Kontext behalten & Limits sparen“. **KontextKit Pro** ergänzt Checkpoints mit Rollback, Fix-Loop-Schutz, Weekly-Ship-Recap, Limit-Budget-Routine und Starter-Vorlagen. → **https://softbros.de/kontextkit**
