@@ -58,6 +58,12 @@ Du kannst auch einfach „Mach einen Handoff“ oder „Wo waren wir?“ schreib
 
 `.agent/handoff.md` kannst du committen (Team, mehrere Rechner) oder in `.gitignore` aufnehmen (nur lokal).
 
+## Typische Situationen
+
+- **Claude Code vergisst nach `/clear` oder der Kompaktierung, was schon besprochen war.** Vorher `/handoff`, danach `/pickup`.
+- **Das Limit ist leer und du wechselst von Claude Code zu Codex oder Cursor.** Die Übergabe liegt im Repo, das neue Tool liest sie mit `/pickup` (in Codex `$pickup`).
+- **Feierabend mitten in einer Aufgabe.** Am nächsten Morgen sagt `/pickup`, wo es weitergeht und was schon gescheitert ist.
+
 ## Tests
 
 ```bash
