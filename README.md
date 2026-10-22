@@ -64,6 +64,10 @@ Du kannst auch einfach „Mach einen Handoff“ oder „Wo waren wir?“ schreib
 - **Das Limit ist leer und du wechselst von Claude Code zu Codex oder Cursor.** Die Übergabe liegt im Repo, das neue Tool liest sie mit `/pickup` (in Codex `$pickup`).
 - **Feierabend mitten in einer Aufgabe.** Am nächsten Morgen sagt `/pickup`, wo es weitergeht und was schon gescheitert ist.
 
+## Lite oder Core?
+
+Lite reicht, wenn du vor allem Übergaben zwischen Sessions brauchst. KontextKit Core lohnt sich, wenn du mehrere Tools nutzt und ihre Regeldateien von Hand pflegst: Du schreibst eine Quelle (`.agent/context.md`), ein Befehl erzeugt daraus AGENTS.md, CLAUDE.md, Cursor-Rules und Copilot-Instructions. Vorhandene Dateien werden importiert und gesichert, und Core warnt, wenn eine Datei die Größenempfehlung des Herstellers überschreitet. Mehr unter [softbros.de/kontextkit](https://softbros.de/kontextkit).
+
 ## Tests
 
 ```bash
