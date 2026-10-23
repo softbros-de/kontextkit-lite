@@ -58,6 +58,31 @@ Du kannst auch einfach „Mach einen Handoff“ oder „Wo waren wir?“ schreib
 
 `.agent/handoff.md` kannst du committen (Team, mehrere Rechner) oder in `.gitignore` aufnehmen (nur lokal).
 
+## So sieht eine Übergabe aus
+
+Ein ausgedachtes, gekürztes Beispiel für `.agent/handoff.md` (Überschriften wie in der Vorlage, Inhalt in deiner Sprache, höchstens 40 Zeilen):
+
+```markdown
+# Handoff: 2026-10-23 17:40
+
+## Goal
+Login per Magic Link für das Kundenportal fertigstellen.
+
+## State
+- Done: Token-Erzeugung und Mailversand (src/auth/magic.ts)
+- In progress: Ablaufzeit des Tokens prüfen
+- Broken / failing: test/auth.test.ts schlägt bei abgelaufenem Token fehl
+
+## Next steps
+1. In src/auth/verify.ts die Ablaufzeit gegen die Serverzeit prüfen
+2. npm test ausführen
+
+## Don't retry
+- Session-Cookie statt Token: scheitert an der Subdomain des Portals
+```
+
+Der Abschnitt **Don't retry** ist der wichtigste: Er verhindert, dass der Agent nach `/clear` oder der Kompaktierung eine schon gescheiterte Idee noch einmal probiert.
+
 ## Typische Situationen
 
 - **Claude Code vergisst nach `/clear` oder der Kompaktierung, was schon besprochen war.** Vorher `/handoff`, danach `/pickup`.
